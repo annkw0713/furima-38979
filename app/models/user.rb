@@ -13,6 +13,6 @@ class User < ApplicationRecord
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates :password, format: { with: VALID_PASSWORD_REGEX }
-  VALID_NAME_REGEX = /\A[ぁ-んァ-ン一-龥]/.freeze
+  VALID_NAME_REGEX = /\A[ぁ-んァ-ヶ一-龥々ー]+\z/.freeze
   VALID_NAME_KANA_REGEX = /\A[ァ-ヶー－]+\z/.freeze
 end
