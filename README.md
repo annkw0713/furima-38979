@@ -40,8 +40,8 @@
   belongs_to :category
   belongs_to :item_condition
   belongs_to :shipping_fee
-  belongs_to :shipping_area
-  belongs_to :shipping_days
+  belongs_to :prefecture
+  belongs_to :shipping_day
 
 ## ordersテーブル
 
