@@ -28,7 +28,9 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order_address).permit(:post_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    params.require(:order_address).permit(:post_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number).merge(
+      user_id: current_user.id, item_id: params[:item_id], token: params[:token]
+    )
   end
 
   def pay_item
@@ -39,5 +41,4 @@ class OrdersController < ApplicationController
       currency: 'jpy'
     )
   end
-
 end
